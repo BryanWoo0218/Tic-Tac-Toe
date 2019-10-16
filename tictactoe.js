@@ -28,41 +28,19 @@ var winningChecker =function(playerMark) {
     finish('N')
   } else {
     var checkId = `${playerMark}${playerMark}${playerMark}`
-    var box0 = boxes[0].textContent
-    var box1 = boxes[1].textContent
-    var box2 = boxes[2].textContent
-    var box3 = boxes[3].textContent
-    var box4 = boxes[4].textContent
-    var box5 = boxes[5].textContent
-    var box6 = boxes[6].textContent
-    var box7 = boxes[7].textContent
-    var box8 = boxes[8].textContent
-    var winningRow = [
-      [box0,box1,box2],
-      [box0,box4,box8],
-      [box0,box3,box6],
-      [box1,box4,box7],
-      [box2,box5,box8],
-      [box3,box4,box5],
-      [box6,box7,box8],
-      [box6,box4,box2],
+    var winningCombination = [
+      [boxes[0],boxes[1],boxes[2]],    // boxLocation --> 0 1 2 //
+      [boxes[0],boxes[4],boxes[8]],    //                 3 4 5 //
+      [boxes[0],boxes[3],boxes[6]],    //                 6 7 8 //
+      [boxes[1],boxes[4],boxes[7]],
+      [boxes[2],boxes[5],boxes[8]],
+      [boxes[3],boxes[4],boxes[5]],
+      [boxes[6],boxes[7],boxes[8]],
+      [boxes[6],boxes[4],boxes[2]],
     ]
-
-    // var winningRow = [
-    //   [boxes[0],boxes[1],boxes[2]],
-    //   [boxes[0],boxes[4],boxes[8]],
-    //   [boxes[0],boxes[3],boxes[6]],
-    //   [boxes[1],boxes[4],boxes[7]],
-    //   [boxes[2],boxes[5],boxes[8]],
-    //   [boxes[3],boxes[4],boxes[5]],
-    //   [boxes[6],boxes[7],boxes[8]],
-    //   [boxes[6],boxes[4],boxes[2]],
-    // ]
-    //   var j =0
-    //   var k = [winningRow[i][j].textContent, winningRow[i][j].textContent, winningRow[i][j].textContent]
-    
-    for (var i = 0; i < winningRow.length; i++) {
-      if ( winningRow[i].join('') === checkId ){
+    for (var i = 0; i < winningCombination.length; i++) {
+      var winningLine = [winningCombination[i][0].textContent, winningCombination[i][1].textContent, winningCombination[i][2].textContent]
+      if ( winningLine.join('') === checkId ){
         console.log('yay')
         finish(playerMark)
       } else {} 
@@ -94,7 +72,24 @@ var reset = function (){
   }
 }
 
-
-boxes.forEach(clickMonitor) ;
+boxes.forEach(clickMonitor)
 restartBtn.addEventListener('click',reset)
 
+
+// var angle = 0; // Degree
+
+// var c = document.getElementById("cumulatedView");
+// var ctx = c.getContext("2d");
+// // x1 = 125;
+// // y1 = 125;
+// // length =  100;
+
+// // x2 = x1 + Math.cos((Math.PI / 180.0) * angle - 90) * length
+// // y2 = y1 + Math.sin((Math.PI / 180.0) * angle - 90) * length
+
+// // ctx.fillStyle = 'green';
+// // ctx.fillRect(10, 10, 160, 100);
+
+// ctx.moveTo(0, 0);
+// ctx.lineTo(500, 500);
+// ctx.stroke();
