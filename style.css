@@ -1,0 +1,52 @@
+header {
+  width: 100%;
+  height: 10%;
+  text-align: center;
+  line-height: 10%;
+}
+main {
+  margin:10%;
+  font-family: 'Coda Caption', sans-serif;
+}
+section {
+  width: 90%;
+  height:90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tic-box{
+  margin: 3%;
+  border: 1px solid red;
+  width: 100px;
+  height:100px;
+  background-color: grey;
+
+}
+
+.player1 {
+  background-color: greenyellow;
+  font-size: 30px;
+  font-weight: bold;
+  /* font-family: 'Baloo Bhaina', cursive;
+  font-family: 'Coda Caption', sans-serif;
+  font-family: 'Fredoka One', cursive;
+  font-family: 'Baloo Bhai', cursive;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Montserrat', sans-serif; */
+  font-family: 'Muli', sans-serif;
+  /* font-family: 'Barlow', sans-serif;
+  font-family: 'Comfortaa', cursive;
+  font-family: 'Righteous', cursive;
+  font-family: 'PT Sans Caption', sans-serif;
+  font-family: 'Prompt', sans-serif; */
+}
+.player2 {
+  background-color: rgb(40, 18, 236);;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Muli', sans-serif;
+}
+.restart {
+  background-color: khaki;
+}
