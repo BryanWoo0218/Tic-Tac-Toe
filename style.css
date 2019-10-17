@@ -19,7 +19,7 @@ header {
 }
 
 main {
-  margin:7% auto 2% auto;
+  margin:4% auto 2% auto;
   font-family: 'Coda Caption', sans-serif;
   width: 300px;
   height: 300px;
@@ -65,7 +65,7 @@ section {
 }
 
 footer{
-  margin-top:10px;
+  margin-top: 40px;
   font-weight: bold;
   text-align: center;
   font-family: 'Lato', sans-serif;
@@ -78,7 +78,7 @@ footer{
   align-items: center;
   width: 300px;
   height:50px;
-  margin:2% auto 5% auto;
+  margin:3% auto 3% auto;
 }
 .player1 {
   background-color: rgb(207, 238, 161);
@@ -107,6 +107,24 @@ footer{
   width: 150px;
   line-height: 40px;
 }
+
+.p1-hand {
+ color: transparent;
+ margin-left: 4px;
+
+}
+.p1-hand.active {
+  color: initial;
+ }
+
+ .p2-hand {
+  color: transparent;
+  margin-left: 4px;
+}
+ .p2-hand.active {
+   color: initial;
+ }
+
 .control-pannel {
   width: 100%;
   display: flex;

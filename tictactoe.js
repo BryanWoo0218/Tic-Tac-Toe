@@ -1,6 +1,5 @@
 //  <<<< 3X3 Tic Tac Toe game >>>>
 var boxes = document.querySelectorAll('.tic-box')
-var clickCounter = 0
 var gameInfo = document.querySelector('.info-display')
 var restartBtn = document.querySelector('.restart')
 var wonIndicate = document.querySelector('.strike')
@@ -8,25 +7,43 @@ var wonIndicateW = document.querySelector('.strikeW')
 var winnerInfo = document.querySelector('.winner')
 var gameBoard = document.querySelector('main')
 var player1Turn = document.querySelector('.player1')
+var player1Hand = document.querySelector('.p1-hand')
 var player2Turn = document.querySelector('.player2')
-
+var player2Hand = document.querySelector('.p2-hand')
+var timer = document.querySelector('.timer')
+var clickCounter = 0
+var timeEclipse = 31
+var playerMark
+var stopId
 
 var clicked = function(event){
   if (event.target.classList[1] !== 'ticked'&& gameInfo.textContent !== 'Winner!') {
     clickCounter++
+    if (timeEclipse < 31 || timeEclipse === 'Time Over') {
+      timerStop()
+      timeEclipse = 31
+      timerStart()
+    } else {
+      timeEclipse = 31
+      timerStart()
+    }
     if(clickCounter % 2 === 1) {
       event.target.classList.add('ticked')
       event.target.textContent = 'X' 
       gameInfo.textContent = 'Play2, your turn'
       player2Turn.classList.add('active')
+      player2Hand.classList.add('active')
       player1Turn.classList.remove('active')
+      player1Hand.classList.remove('active')
       winningChecker('X')
     } else {
       event.target.classList.add('ticked')
       event.target.textContent = 'O'
       gameInfo.textContent = 'Play1, your turn'
       player1Turn.classList.add('active')
+      player1Hand.classList.add('active')
       player2Turn.classList.remove('active')
+      player2Hand.classList.remove('active')
       winningChecker('O')
     }
   } else {
@@ -63,23 +80,57 @@ var winningChecker =function(playerMark) {
   }
 } 
 
-var finish = function (playerMark) {
+var finish = function (playerMark, a) {
+  timerStop(a)
   if (playerMark === 'X') {
     winnerInfo.textContent = 'Player1 is'
     gameInfo.textContent = 'Winner!'
-    player1Turn.classList.add('active')
     player2Turn.classList.remove('active')
+    player2Hand.classList.remove('active')
+    player1Turn.classList.add('active')
+    player1Hand.classList.add('active')
   } else if(playerMark === 'O'){
     winnerInfo.textContent = 'Player2 is'
     gameInfo.textContent = 'Winner!'
     player1Turn.classList.remove('active')
+    player1Hand.classList.remove('active')
     player2Turn.classList.add('active')
+    player2Hand.classList.add('active')
   } else if(playerMark === 'N'){
     winnerInfo.textContent = 'DRAW!'
     gameInfo.textContent = "Let's Play Again!"
     player1Turn.classList.remove('active')
+    player1Hand.classList.remove('active')
     player2Turn.classList.remove('active')
+    player2Hand.classList.remove('active')
+
   } else {}
+}
+
+var timerStart = function(){
+  stopId = setInterval(countDown,250)
+  console.log('Start')
+}
+
+var countDown = function(){
+  if (timeEclipse === 0 ) {
+    if(clickCounter % 2 === 1) {
+      finish('X')
+    } else {
+      finish('O')
+    }
+  } else {
+    timeEclipse -= 0.25
+    console.log('tig')
+  }
+  if (timeEclipse === Math.floor(timeEclipse)) {
+    timer.textContent = timeEclipse
+  } else {}
+}
+
+var timerStop = function(){
+  clearInterval(stopId)
+  console.log('stop with ' + stopId)
 }
 
 var clickMonitor = function(clicking) {
@@ -88,10 +139,15 @@ var clickMonitor = function(clicking) {
 
 var reset = function (){
   clickCounter = 0
+  timerStop()
+  timeEclipse = 31
+  timer.textContent = 30
   gameInfo.textContent = 'Waiting...For Start'
   winnerInfo.textContent = ''
   player1Turn.classList.remove('active')
+  player1Hand.classList.remove('active')
   player2Turn.classList.remove('active')
+  player2Hand.classList.remove('active')
   for (var i = 0; i < boxes.length; i++) {
     boxes[i].textContent = ''
     boxes[i].classList.remove('ticked')
@@ -105,6 +161,7 @@ var playStart = function() {
     gameInfo.textContent = 'Play1 starts the game'
   }
 }
+
 boxes.forEach(clickMonitor)
 restartBtn.addEventListener('click',reset)
 gameBoard.addEventListener('mousemove', playStart)
