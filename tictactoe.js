@@ -12,19 +12,19 @@ var player2Turn = document.querySelector('.player2')
 var player2Hand = document.querySelector('.p2-hand')
 var timer = document.querySelector('.timer')
 var clickCounter = 0
-var timeEclipse = 31
+var timeEclipse = 21
 var playerMark
 var stopId
 
 var clicked = function(event){
   if (event.target.classList[1] !== 'ticked'&& gameInfo.textContent !== 'Winner!') {
     clickCounter++
-    if (timeEclipse < 31 || timeEclipse === 'Time Over') {
+    if (timeEclipse < 21 || timeEclipse === 'Time Over') {
       timerStop()
-      timeEclipse = 31
+      timeEclipse = 21
       timerStart()
     } else {
-      timeEclipse = 31
+      timeEclipse = 21
       timerStart()
     }
     if(clickCounter % 2 === 1) {
@@ -80,8 +80,8 @@ var winningChecker =function(playerMark) {
   }
 } 
 
-var finish = function (playerMark, a) {
-  timerStop(a)
+var finish = function (playerMark) {
+  timerStop()
   if (playerMark === 'X') {
     winnerInfo.textContent = 'Player1 is'
     gameInfo.textContent = 'Winner!'
@@ -114,6 +114,7 @@ var timerStart = function(){
 
 var countDown = function(){
   if (timeEclipse === 0 ) {
+    timesUp()
     if(clickCounter % 2 === 1) {
       finish('X')
     } else {
@@ -122,15 +123,19 @@ var countDown = function(){
   } else {
     timeEclipse -= 0.25
     console.log('tig')
+    if (timeEclipse === Math.floor(timeEclipse)) {
+      timer.textContent = timeEclipse
+    } else {}
   }
-  if (timeEclipse === Math.floor(timeEclipse)) {
-    timer.textContent = timeEclipse
-  } else {}
 }
 
 var timerStop = function(){
   clearInterval(stopId)
   console.log('stop with ' + stopId)
+}
+
+var timesUp = function(){
+  timer.textContent = 'Time Over'
 }
 
 var clickMonitor = function(clicking) {
@@ -140,8 +145,8 @@ var clickMonitor = function(clicking) {
 var reset = function (){
   clickCounter = 0
   timerStop()
-  timeEclipse = 31
-  timer.textContent = 30
+  timeEclipse = 21
+  timer.textContent = 20
   gameInfo.textContent = 'Waiting...For Start'
   winnerInfo.textContent = ''
   player1Turn.classList.remove('active')
