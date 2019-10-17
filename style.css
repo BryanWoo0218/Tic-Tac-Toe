@@ -1,3 +1,4 @@
+
 header {
   margin-top: 5%;
   width: 100%;
@@ -6,7 +7,7 @@ header {
   /* line-height: 100%; */
 }
 main {
-  margin:10% auto;
+  margin:7% auto 5% auto;
   font-family: 'Coda Caption', sans-serif;
   width: 300px;
   height: 300px;
@@ -22,176 +23,182 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* position: relative; */
 }
 .tic-box{
   margin: 3%;
   border: 1px solid red;
   width: calc(100%/3);
   height: 83.12%;
-  /* width: 100px;
-  height: 100px; */
-  line-height: 93.5%;
+  line-height: 88.5%;
   background-color: grey;
   font-size: 90px;
   font-weight: bold;
-  font-family: 'Muli', sans-serif;
   text-align: center;
+  font-family: 'Fredoka One', cursive;
+  /* font-family: 'Baloo Bhai', cursive; */
+  /* font-family: 'Comfortaa', cursive; */
 }
 
 
 .player1 {
   background-color: greenyellow;
-  font-size: 60px;
+  font-size: 20px;
   font-weight: bold;
   text-align: center;
-  /* font-family: 'Baloo Bhaina', cursive;
-  font-family: 'Coda Caption', sans-serif;
-  font-family: 'Fredoka One', cursive;
-  font-family: 'Baloo Bhai', cursive;
-  font-family: 'Lato', sans-serif;
-  font-family: 'Montserrat', sans-serif; */
-  font-family: 'Muli', sans-serif;
-  /* font-family: 'Barlow', sans-serif;
-  font-family: 'Comfortaa', cursive;
-  font-family: 'Righteous', cursive;
-  font-family: 'PT Sans Caption', sans-serif;
-  font-family: 'Prompt', sans-serif; */
 }
 .player2 {
   background-color: rgb(40, 18, 236);;
-  font-size: 60px;
+  font-size: 20px;
   font-weight: bold;
-  font-family: 'Muli', sans-serif;
 }
 .control-pannel {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   
 }
 .restart {
+  display: block;
   background-color: khaki;
+  text-align: center;
+  margin:2% auto 5% auto;
+  width: 100px;
+}
+
+.players {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 300px;
+  margin:2% auto 5% auto;
+}
+.winner {
+  margin-right: 4px;
 }
 
 
-.strike-1 {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.strike {
   width: 100%;
-  height: 5px;
+  height: 10px;
+  background-color: transparent;
+  position: absolute;
+  border-radius: 10px;
+}
+
+.strike-0 {
+  width: 100%;
+  height: 10px;
   background-color: red;
   position: absolute;
-  /* display: none; */
+  top: 15.6%;
+  border-radius: 10px;
 }
-.strike-1.show {
-  display: inline-block;
+
+.strike-1 {
+  width: 120%;
+  height: 10px;
+  background-color: red;
+  position: absolute;
+  top: 49%;
+  left: -10%;
+  transform: rotate(45deg);
+  border-radius: 10px;   
 }
-.strike-1-vertical {
-  width: 5px;
+
+.strike-2 {
+  width: 10px;
   height: 100%;
   background-color: red;
   position: absolute;
-  /* position: absolute; */
-  top: 50%;
-  left: 50%;
-  transform: rotate(45deg);
-  /* font-size: 50px; */
-  /* color: white; */
-  /* transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%); */
-} 
-
-.strike-2 {
-  width: 100%;
-  height: 5px;
-  background-color: red;
-  position: absolute;
-  /* display: none; */
+  top: 0%;
+  left: 15.6%;
+  border-radius: 10px;
 }
 
 .strike-3 {
+  width: 10px;
+  height: 100%;
+  background-color: red;
+  position: absolute;
+  top: 0%;
+  left: 48.5%;
+  border-radius: 10px;
+}
+
+.strike-4 {
+  width: 10px;
+  height: 100%;
+  background-color: red;
+  position: absolute;
+  top: 0%;
+  left: 81.4%;
+  border-radius: 10px;
+}
+
+.strike-5 {
   width: 100%;
-  height: 5px;
+  height: 10px;
   background-color: red;
   position: absolute;
-  /* display: none; */
+  top: 49%;
+  border-radius: 10px;
 }
 
-
-canvas{
-  /* background-color: grey; */
-  /* background-position: center; */
-  background-size: 0% 0%;
-  background: transparent;
-  overflow: auto;
-  width: 0%;
-  height: 0%;
+.strike-6 {
+  width: 100%;
+  height: 10px;
+  background-color: red;
+  position: absolute;
+  top: 81.4%;
+  border-radius: 10px;
 }
 
-.strike-246 {
+.strike-7 {
   width: 120%;
-  height: 5px;
+  height: 10px;
   background-color: red;
   position: absolute;
-  top: 50%;
+  top: 49%;
   left: -10%;
   transform: rotate(-45deg);
+  border-radius: 10px;
 }
 
-.strike-048 {
-  width: 120%;
-  height: 5px;
-  background-color: red;
-  position: absolute;
-  top: 50%;
-  left: -10%;
-  transform: rotate(45deg);   
-}
 
-.strike-012 {
-  width: 100%;
-  height: 5px;
-  background-color: red;
-  position: absolute;
-  top: 16.6%;
-}
 
-.strike-345 {
-  width: 100%;
-  height: 5px;
-  background-color: red;
-  position: absolute;
-  top: 50%;
-}
 
-.strike-678 {
-  width: 100%;
-  height: 5px;
-  background-color: red;
-  position: absolute;
-  top: 83.4%;
-}
 
-.strike-036 {
-  width: 5px;
-  height: 100%;
-  background-color: red;
-  position: absolute;
-  top: 0%;
-  left: 16.6%;
-}
 
-.strike-147 {
-  width: 5px;
-  height: 100%;
-  background-color: red;
-  position: absolute;
-  top: 0%;
-  left: 50%;
-}
-.strike-258 {
-  width: 5px;
-  height: 100%;
-  background-color: red;
-  position: absolute;
-  top: 0%;
-  left: 83.4%;
-}
+
+
+
+
+
+

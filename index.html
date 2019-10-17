@@ -7,39 +7,41 @@
   <title>Document</title>
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Baloo+Bhaina|Barlow:700|Coda+Caption:800|Comfortaa:700|Days+One|Fredoka+One|Lato|Lexend+Zetta|Montserrat|Muli|PT+Sans+Caption:700|Prompt:700|Righteous&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
     <h1>Title Tic Tac Toe</h1>
   </header>
-  <!-- <canvas id="cumulatedView"></canvas> -->
   <main>
-      
-      <section class="top-row">
-        
-        <div class="tic-box"></div>
-        <div class="tic-box"></div>
-        <div class="tic-box"></div>
-        <!-- <div class="strike-1-vertical"></div> -->
-      </section>
-      <section class="mid-row">
-        <div class="tic-box"></div>
-        <div class="tic-box"></div>
-        <div class="tic-box"></div>
-        <!-- <div class="strike-1-vertical"></div> -->
-      </section>
-      <section class="button-row">
-        <div class="tic-box"></div>
-        <div class="tic-box"></div>
-        <div class="tic-box"></div>
-        <!-- <div class="strike-1-vertical"></div> -->
-      </section>
-      <div class="strike-1-vertical"></div>
+    <section class="top-row">
+      <div class="tic-box"></div>
+      <div class="tic-box"></div>
+      <div class="tic-box"></div>
+    </section>
+    <section class="mid-row">
+      <div class="tic-box"></div>
+      <div class="tic-box"></div>
+      <div class="tic-box"></div>
+    </section>
+    <section class="button-row">
+      <div class="tic-box"></div>
+      <div class="tic-box"></div>
+      <div class="tic-box"></div>
+    </section>
+    <div class="strike"></div>
   </main>
+  <div class="players">
+      <div class="player1">Player1</div>
+      <div class="whos-turn"></div>
+      <div class="player2">Player2</div>
+    </div>
   <div class="control-pannel">
-    <button class="restart">RESTART GAME</button>
-    <div class="finish"></div>
-  </div>  
+      <div class="winner"></div>
+    <div class="info-display">Waiting...For Start</div>
+  </div> 
+  <button class="restart">RESTART GAME</button>
+   
   
 
   <script src="tictactoe.js"></script>
