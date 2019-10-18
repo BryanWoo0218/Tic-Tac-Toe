@@ -30,15 +30,19 @@ The html is basically used for the visuallised structured design.
 The css is employed to generate all the styles and animation in this game.
 The javascript is utilised for interaction between user and the game. Also it contributes to create all fuctions for the game.
 
+DOM class css transition position: relative & absolute
+functions (if-esle for) addEventListener event.target 
+
 ---
 ### Approaches to Acheive All Functional Features For The Game
 
-DOM class css transition transfomation
-if esle for  call function eventlistener event.target
+DOM class css transition position: relative & absolute
+if esle for  call function addEventListener event.target
 
 ---
 ### Possible Improvement Idea
 
+* Diagonal winning line animation
 * Set game feature for each match
 * Changeable game board size
 * One player mode (Player1 VS computer)
