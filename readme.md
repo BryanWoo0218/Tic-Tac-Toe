@@ -1,8 +1,8 @@
 # Tic Tac Toe @ Snowing Night 
 
-### Overview
+### Game Overview
 
-Let's start simple game with your friend - **Tic! Tac! Toe!**
+Let's start simple game with your friend - **[Tic! Tac! Toe!](https://bryanwooch.github.io/TicTacToe/)**
 
 ---
 ### Game Instruction
@@ -47,6 +47,3 @@ if esle for  call function addEventListener event.target
 * Changeable game board size
 * One player mode (Player1 VS computer)
 ---
-### Game url
-
-* **[Bryan's Tic Tac Toe @ Snowing Night](https://bryanwooch.github.io/TicTacToe/)**
