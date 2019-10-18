@@ -10,11 +10,14 @@ var player1Turn = document.querySelector('.player1')
 var player1Hand = document.querySelector('.p1-hand')
 var player2Turn = document.querySelector('.player2')
 var player2Hand = document.querySelector('.p2-hand')
+var player1Tricked = document.querySelector('.player1-tricked')
+
 var timer = document.querySelector('.timer')
 var clickCounter = 0
 var timeEclipse = 21
 var playerMark
 var stopId
+var trickYetToPlayer1 = true
 
 var clicked = function(event){
   if (event.target.classList[1] !== 'ticked'&& gameInfo.textContent !== 'Winner!') {
@@ -27,15 +30,25 @@ var clicked = function(event){
       timeEclipse = 21
       timerStart()
     }
+    event.target.classList.remove('player1-tricked')
     if(clickCounter % 2 === 1) {
       event.target.classList.add('ticked')
-      event.target.textContent = 'X' 
-      gameInfo.textContent = 'Play2, your turn'
-      player2Turn.classList.add('active')
-      player2Hand.classList.add('active')
-      player1Turn.classList.remove('active')
-      player1Hand.classList.remove('active')
-      winningChecker('X')
+      var doTrickNow = Math.round(Math.random()*5)
+      if (trickYetToPlayer1 && doTrickNow === 1) {
+        trickYetToPlayer1 = false
+        event.target.textContent = 'O'
+        event.target.classList.add('player1-tricked')
+        winningChecker('O')
+        gameInfo.textContent = "Oh! it's my mistake! Sorry Player1."
+      } else {
+        event.target.textContent = 'X' 
+        gameInfo.textContent = 'Play2, your turn'
+        player2Turn.classList.add('active')
+        player2Hand.classList.add('active')
+        player1Turn.classList.remove('active')
+        player1Hand.classList.remove('active')
+        winningChecker('X')
+      }
     } else {
       event.target.classList.add('ticked')
       event.target.textContent = 'O'
@@ -143,6 +156,7 @@ var clickMonitor = function(clicking) {
 }
 
 var reset = function (){
+  trickYetToPlayer1 = true
   clickCounter = 0
   timerStop()
   timeEclipse = 21
@@ -156,6 +170,7 @@ var reset = function (){
   for (var i = 0; i < boxes.length; i++) {
     boxes[i].textContent = ''
     boxes[i].classList.remove('ticked')
+    boxes[i].classList.remove('player1-tricked')
     wonIndicate.classList.remove(`strike-${i}`)
     wonIndicateW.classList.remove(`strikeW-${i}`)
   }

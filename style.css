@@ -59,6 +59,11 @@ section {
   transform: translateY(4px);
 }
 
+.player1-tricked {
+  color: red;
+}
+
+
 footer{
   margin-top: 40px;
   font-weight: bold;
