@@ -9,13 +9,14 @@ Let's start simple game with your friend - **Tic! Tac! Toe!**
 
 * **Once the Player1 moves the cursor into the game board, the game starts!**
 * Players can click only at unticked box.
-* After Player1 click a box, now it is Player2's turn.
+* After Player1 :x: :point_left: click a box, now it is :point_right: Player2's :o: turn.
 * Players change their turn automatically after the opposite player's click.
-* **Remember! Timer starts count down.**
+* **Remember! :alarm_clock: Timer starts count down.**
 * **If times over,game is finished and uncliked player loose the game**
 * Once a play won the game, you will see the winning line and winner.
 * Draw can be happen.
 * If you want, you can reset the game with **RESTART GAME** button.
+* **Player2!, There is MAGIC for you to win the game:stuck_out_tongue_winking_eye:**
 * **ENJOY!**
 
 ---
@@ -38,8 +39,9 @@ if esle for  call function eventlistener event.target
 ---
 ### Possible Improvement Idea
 
-Here
-
+* Set game feature for each match
+* Changeable game board size
+* One player mode (Player1 VS computer)
 ---
 ### Game url
 
