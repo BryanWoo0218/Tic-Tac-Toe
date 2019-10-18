@@ -10,8 +10,6 @@ var player1Turn = document.querySelector('.player1')
 var player1Hand = document.querySelector('.p1-hand')
 var player2Turn = document.querySelector('.player2')
 var player2Hand = document.querySelector('.p2-hand')
-var player1Tricked = document.querySelector('.player1-tricked')
-
 var timer = document.querySelector('.timer')
 var clickCounter = 0
 var timeEclipse = 21
@@ -116,7 +114,6 @@ var finish = function (playerMark) {
     player1Hand.classList.remove('active')
     player2Turn.classList.remove('active')
     player2Hand.classList.remove('active')
-
   } else {}
 }
 
