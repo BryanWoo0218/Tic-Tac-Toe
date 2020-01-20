@@ -41,6 +41,11 @@ DOM class css transition position: relative & absolute
 if esle for  call function addEventListener event.target
 
 ---
+### Idea for winning conditions.
+
+![Image of winning condition](https://github.com/BryanWooCH/TicTacToe/winningCondition.png)
+
+---
 ### Challenges
 
 * Defining Player1 and 2
