@@ -43,7 +43,7 @@ if esle for  call function addEventListener event.target
 ---
 ### Idea for winning conditions.
 
-![Image of winning condition](https://github.com/BryanWooCH/TicTacToe/winningCondition.png)
+![Image of winning condition](https://github.com/BryanWooCH/TicTacToe/blob/master/winningCondition.png?raw=true)
 
 ---
 ### Challenges
