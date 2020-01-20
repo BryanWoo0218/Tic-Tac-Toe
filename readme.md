@@ -41,6 +41,14 @@ DOM class css transition position: relative & absolute
 if esle for  call function addEventListener event.target
 
 ---
+### Challenges
+
+* Defining Player1 and 2
+* Checking the winning condition at every valid ticking by player1 or player2
+* Indicating the winning line over the game board
+* Counting down
+
+---
 ### Possible Improvement Idea
 
 * Diagonal winning line animation
