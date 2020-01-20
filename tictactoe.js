@@ -1,4 +1,3 @@
-//  <<<< 3X3 Tic Tac Toe game >>>>
 var boxes = document.querySelectorAll('.tic-box')
 var gameInfo = document.querySelector('.info-display')
 var restartBtn = document.querySelector('.restart')
@@ -65,9 +64,9 @@ var clicked = function(event){
 var winningChecker =function(playerMark) {
   var checkId = `${playerMark}${playerMark}${playerMark}`
   var winningCombination = [
-    [boxes[0],boxes[1],boxes[2]],    // boxLocation --> 0 1 2 //
-    [boxes[0],boxes[4],boxes[8]],    //                 3 4 5 //
-    [boxes[0],boxes[3],boxes[6]],    //                 6 7 8 //
+    [boxes[0],boxes[1],boxes[2]],    
+    [boxes[0],boxes[4],boxes[8]],    
+    [boxes[0],boxes[3],boxes[6]],    
     [boxes[1],boxes[4],boxes[7]],
     [boxes[2],boxes[5],boxes[8]],
     [boxes[3],boxes[4],boxes[5]],
@@ -119,7 +118,6 @@ var finish = function (playerMark) {
 
 var timerStart = function(){
   stopId = setInterval(countDown,250)
-  console.log('Start')
 }
 
 var countDown = function(){
@@ -132,7 +130,6 @@ var countDown = function(){
     }
   } else {
     timeEclipse -= 0.25
-    console.log('tig')
     if (timeEclipse === Math.floor(timeEclipse)) {
       timer.textContent = timeEclipse
     } else {}
@@ -141,7 +138,6 @@ var countDown = function(){
 
 var timerStop = function(){
   clearInterval(stopId)
-  console.log('stop with ' + stopId)
 }
 
 var timesUp = function(){

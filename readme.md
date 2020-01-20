@@ -24,7 +24,8 @@ Let's start simple game with your friend - **[Tic! Tac! Toe!](https://bryanwooch
 
 * **HTML5**
 * **CSS3**
-* **JavaScript ECMA2018**
+* **JavaScript**
+
 These three programming language written through VS code are properly used in this project. 
 The html is basically used for the visuallised structured design.
 The css is employed to generate all the styles and animation in this game.
