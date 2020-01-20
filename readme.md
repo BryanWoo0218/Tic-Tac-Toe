@@ -18,7 +18,7 @@ Let's start simple game with your friend - **[Tic! Tac! Toe!](https://bryanwooch
 * If you want, you can reset the game with **RESTART GAME** button.
 * **Player2!, There is MAGIC for you to win the game:stuck_out_tongue_winking_eye:**
   - There is more chance to win for Player1, so Player1's :x: will be changed to Player2's mark :o: at once in a game. So, increase Player2's winning chance.
-  ![Image of winning condition](https://github.com/BryanWooCH/TicTacToe/blob/master/P1random.png?raw=true)
+  ![Image of winning condition](https://github.com/BryanWooCH/TicTacToe/blob/master/p2magic.png?raw=true)
 
 
 * **ENJOY!**
